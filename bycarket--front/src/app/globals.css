@@ -1,0 +1,60 @@
+/* Fuente 1: Be Vietnam Pro - Para botones y elementos de la interfaz */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Fuente 2: Questrial - Para subtítulos */
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+/* Fuente 3: Inter - Para números o porcentajes */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-principal-blue: #103663;
+  --color-secondary-blue: #4a77a8;
+  --font-inter: "Inter", sans-serif;
+  --font-be-vietnam: "Be Vietnam Pro", sans-serif;
+  --font-questrial: "Questrial", sans-serif;
+}
+
+body {
+  background-color: white;
+  font-family: var(--font-inter);
+}
+
+/* Encabezados h1-h6 con Questrial */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+a {
+  font-family: var(--font-questrial);
+}
+
+/* Elementos de UI con Be Vietnam Pro */
+button,
+a,
+input,
+select,
+textarea,
+label,
+.btn,
+.nav-item,
+.menu-item,
+.card-header,
+.tab,
+.badge,
+.tag,
+.tooltip,
+.notification,
+.alert {
+  font-family: var(--font-be-vietnam);
+}
+
+/* Placeholders con Be Vietnam Pro */
+::placeholder {
+  font-family: var(--font-be-vietnam);
+}

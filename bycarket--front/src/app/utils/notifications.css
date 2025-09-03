@@ -1,0 +1,139 @@
+:root {
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  --text: #374151;
+  --bg: #ffffff;
+  --border: #e5e7eb;
+}
+
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  width: 400px;
+  max-width: calc(100vw - 2rem);
+}
+
+.toast {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.toast:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.toast-success {
+  border-left: 4px solid var(--success);
+}
+
+.toast-error {
+  border-left: 4px solid var(--error);
+}
+
+.toast-warning {
+  border-left: 4px solid var(--warning);
+}
+
+.toast-info {
+  border-left: 4px solid var(--info);
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+}
+
+.toast-message {
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confirm-dialog {
+  width: 100%;
+}
+
+.confirm-message {
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.confirm-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.confirm-btn:hover {
+  background: #f9fafb;
+}
+
+.confirm-yes {
+  background: var(--info);
+  border-color: var(--info);
+  color: white;
+}
+
+.confirm-yes:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.confirm-toast {
+  padding: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+
+  .confirm-buttons {
+    flex-direction: column;
+  }
+
+  .confirm-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f3f4f6;
+    --bg: #1f2937;
+    --border: #374151;
+  }
+
+  .confirm-btn:hover {
+    background: #374151;
+  }
+}
